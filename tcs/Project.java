@@ -1,4 +1,4 @@
-package com.automate;
+package com.tcs;
 
 public class Project {
     private int projectID;
