@@ -9,8 +9,8 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Project[] project = new Project[4];
-        for (int i = 0; i < project.length; i++) {
 
+        for (int i = 0; i < project.length; i++) {
             int projId = sc.nextInt();
             sc.nextLine();
             String projName = sc.nextLine();
@@ -19,8 +19,7 @@ public class Solution {
             String tech1 = sc.nextLine();
             String tech2 = sc.nextLine();
             String tech3 = sc.nextLine();
-            project[i] = new Project(projId, projName, projCost, tech1
-                    , tech2, tech3);
+            project[i] = new Project(projId, projName, projCost, tech1, tech2, tech3);
 
         }
 
