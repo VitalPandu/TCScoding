@@ -10,17 +10,16 @@ public class Solution {
         Project[] p = getProjectDetails();
 
         System.out.println("Enter technology to search");
-        String tech = sc.nextLine();
-        int countOfProjects = findProjsCountForGivenTech(p, tech);
+        int countOfProjects = findProjsCountForGivenTech(p, sc.nextLine());
         if (countOfProjects > 0)
             System.out.println(countOfProjects);
         else
             System.out.println("No Projects with the given technology");
 
 
-        Project p1 = getProjectWithMaxCost(p);
-        if (p != null)
-            System.out.println(p1.getProjectID() + "@" + p1.getProjName());
+        Project projectCost = getProjectWithMaxCost(p);
+        if (projectCost != null)
+            System.out.println(projectCost.getProjectID() + "@" + projectCost.getProjName());
         else
             System.out.println("No Project");
 
@@ -28,9 +27,10 @@ public class Solution {
 
     public static Project[] getProjectDetails() {
         Scanner sc = new Scanner(System.in);
+        Project[] project = new Project[5];
         System.out.println("print project data");
-        for (int i = 0; i <= 4; i++) {
-            Project[] project = new Project[];
+        for (int i = 0; i <6; i++) {
+
             int projId = sc.nextInt();
             sc.nextLine();
             String projName = sc.nextLine();
@@ -52,7 +52,7 @@ public class Solution {
             if (    project[i].getTechnology1().equalsIgnoreCase((technology)) ||
                     project[i].getTechnology2().equalsIgnoreCase((technology)) ||
                     project[i].getTechnology3().equalsIgnoreCase((technology)))
-                return count += 1;
+                return count++ ;
         }
 
         return 0;

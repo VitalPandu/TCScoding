@@ -33,7 +33,7 @@ public class Project {
         this.projName = projName;
     }
 
-    public int getProjCost() {
+    public double getProjCost() {
         return projCost;
     }
 
